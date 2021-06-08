@@ -1,3 +1,3 @@
-# sufficit-ddictionary
-Default Dictionary, returns no null results.
+# sufficit-asternet-core
+AsterNET Core Classes, no game metrics
 
