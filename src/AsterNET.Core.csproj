@@ -17,15 +17,15 @@
   <PropertyGroup Label="Package Information">
     <PackageLicenseFile>license</PackageLicenseFile>
     <PackageReadmeFile>readme.md</PackageReadmeFile>
-    <PackageProjectUrl>https://github.com/sufficit/sufficit-ddictionary</PackageProjectUrl>
-    <Description>Non null Dictionary. Using default types of generic objects. Thread safe !.</Description>
+    <PackageProjectUrl>https://github.com/sufficit/sufficit-asternet-core</PackageProjectUrl>
+    <Description>AsterNET Core Classes, no game metrics !.</Description>
     <RepositoryUrl>https://github.com/sufficit/sufficit-asternet-core</RepositoryUrl>
     <PackageIcon>icon.png</PackageIcon>
     <PackageIconUrl>https://raw.githubusercontent.com/sufficit/sufficit-asternet-core/master/icon.ico</PackageIconUrl>
     <Company>SUFFICIT SOLUÇÕES EM TECNOLOGIA DA INFORMAÇÃO</Company>
     <Authors>Sufficit</Authors>
     <PackageId>Sufficit.AsterNET.Core</PackageId>
-    <Product>DDictionary</Product>
+    <Product>AsterNETCore</Product>
   </PropertyGroup>
 
   <PropertyGroup Label="General">
