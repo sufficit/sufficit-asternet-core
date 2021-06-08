@@ -16,22 +16,23 @@ jobs:
         dotnet-version: '2.2.x'
         
     - name: Install dependencies
+      working-directory: ./src
       run: dotnet restore
       
     - name: Build
-      working-directory: ./
+      working-directory: ./src
       run: dotnet build --configuration Release --no-restore
       
     - name: Deploy Package 
-      working-directory: ./
+      working-directory: ./src
       run: dotnet pack --configuration Release --output ./nupkgs
     
     - name: Publish to Nuget.Org
-      working-directory: ./
+      working-directory: ./src
       run: dotnet nuget push ./nupkgs/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{secrets.NUGET_API_KEY}}
       
     - name: Publish to GitHub
-      working-directory: ./
+      working-directory: ./src
       run: dotnet nuget push ./nupkgs/*.nupkg --source https://nuget.pkg.github.com/${{github.repository_owner}}/index.json --api-key ${{github.token}}
       
     - name: Delete Old Packages from GitHub

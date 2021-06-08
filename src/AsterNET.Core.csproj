@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup Label="Targeting">
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>AsterNET</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Versioning">
+    <VersionSuffix>$([System.DateTime]::UtcNow.ToString(yyyy)).$([System.DateTime]::UtcNow.ToString(1MMdd)).$([System.DateTime]::UtcNow.ToString(1HHmm))</VersionSuffix>
+    <AssemblyVersion Condition=" '$(VersionSuffix)' == '' ">1.0.0.0</AssemblyVersion>
+    <AssemblyVersion Condition=" '$(VersionSuffix)' != '' ">1.$(VersionSuffix)</AssemblyVersion>
+    <Version>1.0.0.0</Version>
+    <Version Condition=" '$(VersionSuffix)' == '' ">1.0.0.0</Version>
+    <Version Condition=" '$(VersionSuffix)' != '' ">1.$(VersionSuffix)</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Package Information">
+    <PackageLicenseFile>license</PackageLicenseFile>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/sufficit/sufficit-ddictionary</PackageProjectUrl>
+    <Description>Non null Dictionary. Using default types of generic objects. Thread safe !.</Description>
+    <RepositoryUrl>https://github.com/sufficit/sufficit-asternet-core</RepositoryUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageIconUrl>https://raw.githubusercontent.com/sufficit/sufficit-asternet-core/master/icon.ico</PackageIconUrl>
+    <Company>SUFFICIT SOLUÇÕES EM TECNOLOGIA DA INFORMAÇÃO</Company>
+    <Authors>Sufficit</Authors>
+    <PackageId>Sufficit.AsterNET.Core</PackageId>
+    <Product>DDictionary</Product>
+  </PropertyGroup>
+
+  <PropertyGroup Label="General">
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+
+    <!-- Copia todas as dlls de dependencias para o diretório de publicação dos projetos que o utilizam -->
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <PreserveCompilationReferences>false</PreserveCompilationReferences>
+
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="../license">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="../readme.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+  
+</Project>

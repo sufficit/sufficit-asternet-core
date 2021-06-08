@@ -1,1 +1,3 @@
-"# sufficit-asternet-core" 
+# sufficit-ddictionary
+Default Dictionary, returns no null results.
+
