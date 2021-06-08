@@ -16,7 +16,6 @@ jobs:
         dotnet-version: '2.2.x'
         
     - name: Install dependencies
-      working-directory: ./
       run: dotnet restore
       
     - name: Build
