@@ -5,41 +5,36 @@
     <RootNamespace>AsterNET</RootNamespace>
   </PropertyGroup>
 
-  <PropertyGroup Label="Versioning">
-    <VersionSuffix>$([System.DateTime]::UtcNow.ToString(yyyy)).$([System.DateTime]::UtcNow.ToString(1MMdd)).$([System.DateTime]::UtcNow.ToString(1HHmm))</VersionSuffix>
+  <PropertyGroup Label="Sufficit Versioning">
+    <VersionSuffix>1.$([System.DateTime]::UtcNow.ToString(yy)).$([System.DateTime]::UtcNow.ToString(MMdd)).$([System.DateTime]::UtcNow.ToString(HHmm))</VersionSuffix>
     <AssemblyVersion Condition=" '$(VersionSuffix)' == '' ">1.0.0.0</AssemblyVersion>
-    <AssemblyVersion Condition=" '$(VersionSuffix)' != '' ">1.$(VersionSuffix)</AssemblyVersion>
-    <Version>1.0.0.0</Version>
-    <Version Condition=" '$(VersionSuffix)' == '' ">1.0.0.0</Version>
-    <Version Condition=" '$(VersionSuffix)' != '' ">1.$(VersionSuffix)</Version>
+    <AssemblyVersion Condition=" '$(VersionSuffix)' != '' ">$(VersionSuffix)</AssemblyVersion>
+    <Version Condition=" '$(VersionSuffix)' == '' ">0.0.1.0</Version>
+    <Version Condition=" '$(VersionSuffix)' != '' ">$(VersionSuffix)</Version>
   </PropertyGroup>
 
-  <PropertyGroup Label="Package Information">
-    <PackageLicenseFile>license</PackageLicenseFile>
-    <PackageReadmeFile>readme.md</PackageReadmeFile>
-    <PackageProjectUrl>https://github.com/sufficit/sufficit-asternet-core</PackageProjectUrl>
-    <Description>AsterNET Core Classes, no game metrics !.</Description>
-    <RepositoryUrl>https://github.com/sufficit/sufficit-asternet-core</RepositoryUrl>
-    <PackageIcon>icon.png</PackageIcon>
-    <PackageIconUrl>https://raw.githubusercontent.com/sufficit/sufficit-asternet-core/master/icon.ico</PackageIconUrl>
+  <PropertyGroup Label="Sufficit Product General">
     <Company>SUFFICIT SOLUÇÕES EM TECNOLOGIA DA INFORMAÇÃO</Company>
     <Authors>Sufficit</Authors>
-    <PackageId>Sufficit.AsterNET.Core</PackageId>
-    <Product>AsterNETCore</Product>
-  </PropertyGroup>
-
-  <PropertyGroup Label="General">
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <ProductName>Sufficit AsterNET Core</ProductName>
+    <AssemblyName>SufficitAsterNETCore</AssemblyName>
 
     <!-- Copia todas as dlls de dependencias para o diretório de publicação dos projetos que o utilizam -->
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <PreserveCompilationReferences>false</PreserveCompilationReferences>
 
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
-    <Optimize>true</Optimize>
   </PropertyGroup>
 
+  <PropertyGroup Label="Sufficit Pacote NUGET">
+    <Name>Sufficit.AsterNET.Core</Name>
+    <PackageId>Sufficit.AsterNET.Core</PackageId>
+    <PackageDescription>AsterNET Core Classes, no game metrics !.</PackageDescription>
+    <RepositoryUrl>https://github.com/sufficit/sufficit-asternet-core</RepositoryUrl>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+  
   <ItemGroup>
     <None Include="../icon.png">
       <Pack>True</Pack>
