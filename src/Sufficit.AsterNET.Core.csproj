@@ -18,7 +18,7 @@
     <Authors>Sufficit</Authors>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <ProductName>Sufficit AsterNET Core</ProductName>
-    <AssemblyName>SufficitAsterNETCore</AssemblyName>
+    <AssemblyName>Sufficit.AsterNET.Core</AssemblyName>
 
     <!-- Copia todas as dlls de dependencias para o diretório de publicação dos projetos que o utilizam -->
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
@@ -32,7 +32,13 @@
     <PackageId>Sufficit.AsterNET.Core</PackageId>
     <PackageDescription>AsterNET Core Classes, no game metrics !.</PackageDescription>
     <RepositoryUrl>https://github.com/sufficit/sufficit-asternet-core</RepositoryUrl>
+	<PackageProjectUrl>https://github.com/sufficit/sufficit-asternet-core</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/sufficit/sufficit-asternet-core/master/icon.ico</PackageIconUrl>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+	
+	<PackageLicenseFile>license</PackageLicenseFile>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
   
   <ItemGroup>
